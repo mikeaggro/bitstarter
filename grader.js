@@ -62,7 +62,7 @@ if(require.main == module) {
 	}
 
     var outJson = JSON.stringify(checkJson, null, 4);
-    console.log(outJson);
+    fs.writeFileSync('checkResults.txt',outJson.toString());
 }
 else {
     exports.checkHtmlFile = checkHtmlFile;
